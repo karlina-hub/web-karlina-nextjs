@@ -62,7 +62,7 @@ export default function Home() {
           isOpen: true,
           type: "success",
           message:
-            "Thank you for reaching out to Karlina Roastery. Our team will review your inquiry and get back to you soon.",
+            "Thank you for reaching out to Karlina Coffee Company. Our team will review your inquiry and get back to you soon.",
         });
         formElement.reset(); // Mengosongkan form setelah berhasil
       } else {
