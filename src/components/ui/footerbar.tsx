@@ -78,17 +78,17 @@ export function FooterbarComp() {
                 Our Story
               </a>
               <a
-                href="/wholesale"
+                href="/contact"
                 className="text-sm md:text-base opacity-90 hover:opacity-100 hover:underline transition w-fit"
               >
                 Contact Us
               </a>
-              {/* <a
-                href="/faq"
+              <a
+                href="/events"
                 className="text-sm md:text-base opacity-90 hover:opacity-100 hover:underline transition"
               >
-                FAQ
-              </a> */}
+                Events
+              </a>
             </div>
 
             {/* Kolom 2: Shop & Business */}
@@ -103,7 +103,7 @@ export function FooterbarComp() {
                 All Products
               </a>
               <a
-                href="/wholesale"
+                href="/contact"
                 className="text-sm md:text-base opacity-90 hover:opacity-100 hover:underline transition w-fit"
               >
                 Wholesale / B2B Partner

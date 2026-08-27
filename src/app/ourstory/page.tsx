@@ -36,35 +36,24 @@ export default function Home() {
                         min-h-screen items-center 
                         px-6 md:px-20 lg:px-40"
             >
-              <div className="font-bold text-3xl md:text-5xl text-white font-averia">
+              <div className="font-bold text-3xl md:text-5xl text-white font-averia animate-in fade-in slide-in-from-top-6 duration-1000 delay-300 fill-mode-both">
                 Karlina Coffee Company
               </div>
 
-              {/* <div className="mt-3 md:mt-10 text-xl md:text-3xl text-white font-averia">
-                Crafting Connection Through Coffee
-              </div> */}
-
-              <div className="mt-5 md:mt-6 max-w-md md:max-w-4xl tracking-wide text-sm md:text-xl leading-relaxed text-center text-white">
+              <div className="mt-5 md:mt-6 max-w-md md:max-w-4xl tracking-wide text-sm md:text-xl leading-relaxed text-center text-white animate-in fade-in slide-in-from-top-6 duration-1000 delay-500 fill-mode-both">
                 At Karlina Coffee, we believe that each cup of coffee should
                 tell stories of connection, sustainability, and respect. Our
                 purpose is to create meaningful partnerships that value the
                 earth and those who cultivate it.
               </div>
 
-              <div className=" flex gap-4 md:gap-8 mt-6 md:mt-8 flex items-center scroll-smooth">
+              <div className="absolute bottom-20 md:bottom-8 left-1/2 -translate-x-1/2 animate-in fade-in slide-in-from-top-6 duration-1000 delay-700 fill-mode-both">
                 <a
                   href="#story"
-                  className="    
-                  absolute bottom-20 md:bottom-8 left-1/2    
-                  -translate-x-1/2    
-                  flex flex-col items-center    
-                  text-white/70    
-                  transition-all duration-300    
-                  hover:text-white    
-                  animate-bounce"
+                  className="flex flex-col items-center text-white/70 transition-all duration-300 hover:text-white animate-bounce"
                 >
                   <span className="text-xs uppercase font-averia">
-                    Tap to Continue
+                    Tap to Start The Journey
                   </span>
 
                   <div className="mt-2 text-2xl">↓</div>

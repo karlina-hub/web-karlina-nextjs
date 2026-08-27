@@ -32,8 +32,9 @@ export default function Home() {
             Product
           </div>
           <div className="mt-2 md:mt-4 max-w-md md:max-w-5xl tracking-wide text-sm md:text-xl leading-relaxed text-center text-black">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            From carefully selected green beans to expertly roasted coffee,
+            explore our products crafted with quality, precision, and flavor in
+            mind.
           </div>
         </div>
 
@@ -44,7 +45,11 @@ export default function Home() {
                         max-w-7xl mx-auto"
         >
           {/* Card 1 */}
-          <a href="#">
+          <a
+            href="https://www.instagram.com/karlinacoffeeprocessing/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div className="group relative w-full aspect-[4/3] md:aspect-square rounded-xl overflow-hidden">
               <div className="absolute inset-0 bg-[url('../app/asset/greenbeans.webp')] bg-left bg-cover bg-no-repeat">
                 <div className="absolute inset-0 flex items-end p-4 md:p-6 bg-gradient-to-t from-[#F6F2EA] via-[#F6F2EA]/70 to-transparent">
@@ -76,7 +81,11 @@ export default function Home() {
           </a>
 
           {/* Card 2 */}
-          <a href="#">
+          <a
+            href="https://www.instagram.com/karlinaroastery/"
+            target="_blank"
+            rel="noopener noreffer"
+          >
             <div className="group relative w-full aspect-[4/3] md:aspect-square rounded-xl overflow-hidden">
               <div className="absolute inset-0 bg-[url('../app/asset/roastedbeans.webp')] bg-left bg-cover bg-no-repeat">
                 <div className="absolute inset-0 flex items-end p-4 md:p-6  bg-gradient-to-t from-[#F6F2EA] via-[#F6F2EA]/70 to-transparent">
@@ -108,7 +117,11 @@ export default function Home() {
           </a>
 
           {/* Card 3 */}
-          <a href="#">
+          <a
+            href="https://www.instagram.com/escopia.co/"
+            target="_blank"
+            rel="noopener noreffer"
+          >
             <div className="group relative w-full aspect-[4/3] md:aspect-square rounded-xl overflow-hidden">
               <div className="absolute inset-0 bg-[url('../app/asset/escopiacoffee.webp')] bg-left bg-cover bg-no-repeat">
                 <div className="absolute inset-0 flex items-end p-4 md:p-6  bg-gradient-to-t from-[#F6F2EA] via-[#F6F2EA]/70 to-transparent">

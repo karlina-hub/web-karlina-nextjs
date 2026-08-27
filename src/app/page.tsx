@@ -45,36 +45,38 @@ export default function Home() {
             {/* content wrapper */}
             <div
               className="relative z-20 flex flex-col justify-center 
-                        min-h-screen text-justify 
-                        px-6 md:px-20 lg:px-30"
+                 min-h-screen text-justify 
+                 px-6 md:px-20 lg:px-30"
             >
               {/* SUBTITLE */}
-              <div className="text-lg md:text-2xl font-medium text-white font-averia">
+              {/* Animasi langsung berjalan (tanpa delay) */}
+              <div className="text-lg md:text-2xl font-medium text-white font-averia animate-in fade-in slide-in-from-top-6 duration-1000 fill-mode-both">
                 Your Ultimate Coffee Solution,
               </div>
 
               {/* TITLE */}
-              <div className="mt-4 text-3xl md:text-5xl lg:text-6xl font-bold text-white font-averia leading-tight">
+              {/* Muncul dengan jeda 200ms setelah subtitle */}
+              <div className="mt-4 text-3xl md:text-5xl lg:text-6xl font-bold text-white font-averia leading-tight animate-in fade-in slide-in-from-top-6 duration-1000 delay-200 fill-mode-both">
                 From Soil to Cup
               </div>
 
               {/* DESCRIPTION */}
-              <div className="mt-5 max-w-md md:max-w-2xl tracking-wide text-sm md:text-xl leading-relaxed text-white text-left">
+              {/* Muncul dengan jeda 500ms */}
+              <div className="mt-5 max-w-md md:max-w-2xl tracking-wide text-sm md:text-xl leading-relaxed text-white text-left animate-in fade-in slide-in-from-top-6 duration-1000 delay-500 fill-mode-both">
                 Directly sourced specialty coffee crafted with transparency,
                 sustainability, and exceptional flavor in every cup.
               </div>
 
-              <div className=" flex gap-4 md:gap-8 mt-6 md:mt-8 flex items-center scroll-smooth">
+              {/* SCROLL BUTTON WRAPPER */}
+              {/* 
+          1. Saya membuang penulisan class 'flex' yang ganda di kode sebelumnya.
+          2. Class `absolute` dipindahkan ke div wrapper ini agar posisi tetap presisi.
+          3. Muncul paling akhir dengan jeda 700ms.
+      */}
+              <div className="absolute bottom-20 md:bottom-8 left-1/2 -translate-x-1/2 animate-in fade-in slide-in-from-top-6 duration-1000 delay-700 fill-mode-both">
                 <a
                   href="#where-great-coffee"
-                  className="    
-                  absolute bottom-20 md:bottom-8 left-1/2    
-                  -translate-x-1/2    
-                  flex flex-col items-center    
-                  text-white/70    
-                  transition-all duration-300    
-                  hover:text-white    
-                  animate-bounce"
+                  className="flex flex-col items-center text-white/70 transition-all duration-300 hover:text-white animate-bounce"
                 >
                   <span className="text-xs uppercase font-averia">
                     Tap to Start The Journey
@@ -233,7 +235,7 @@ export default function Home() {
         <div className="mt-10 md:mt-14 font-bold text-2xl md:text-4xl lg:text-5xl text-heading-text font-averia">
           Where Great Coffee Begins
         </div>
-        <div className="mt-4 mx-auto max-w-sm md:max-w-5xl text-sm md:text-xl leading-relaxed text-[#8D6E63] font-gantari">
+        <div className="mt-4 mx-auto max-w-sm md:max-w-4xl text-sm md:text-xl leading-relaxed text-[#8D6E63] font-gantari">
           Every cup of Karlina coffee begins with carefully selected beans from
           trusted farmers, processed with passion and dedication to deliver
           quality you can taste.
@@ -309,10 +311,13 @@ export default function Home() {
 
             <a
               href="/ourstory"
-              className="mt-4 max-w-fit px-5 py-3 text-sm md:text-xl md:px-6 md:py-4 bg-[#F7F3EB] text-[#9E0040] font-semibold rounded-xl transition duration-300
-                    hover:bg-[#9E0040] hover:text-[#F7F3EB] "
+              className="mt-4 w-full md:w-fit flex items-center justify-center gap-3 px-5 py-3 text-sm md:text-lg md:px-6 md:py-4 bg-[#F7F3EB] text-[#9E0040] font-semibold rounded-xl transition-all duration-300 group
+                        hover:bg-[#80102b] hover:text-[#F7F3EB] "
             >
               Learn Our Story
+              <span className="transition-transform group-hover:translate-x-1">
+                →
+              </span>
             </a>
           </div>
         </div>
@@ -322,7 +327,7 @@ export default function Home() {
         <div className="mt-14 font-bold text-2xl md:text-4xl lg:text-5xl text-heading-text font-averia">
           How We Craft Our Coffee
         </div>
-        <div className="mt-4 mx-auto max-w-sm md:max-w-5xl text-sm md:text-xl leading-relaxed text-[#8D6E63] font-gantari">
+        <div className="mt-4 mx-auto max-w-sm md:max-w-4xl text-sm md:text-xl leading-relaxed text-[#8D6E63] font-gantari">
           We carefully roast and process every bean using precise techniques and
           modern equipment to bring out the best flavor and aroma in every
           batch.
@@ -463,7 +468,7 @@ export default function Home() {
       </div> */}
 
       {/* Title Text Wrapper*/}
-      <div className="relative z-20 px-6 md:px-20 lg:px-40 text-center">
+      <div className="relative z-20 px-6 md:px-20 lg:px-36 text-center">
         {/* Building a Better Coffee Industry */}
         <div className="mt-16 font-bold text-2xl md:text-4xl lg:text-5xl text-heading-text font-averia">
           Building a Better Coffee Industry
@@ -618,7 +623,7 @@ export default function Home() {
           text-white
         "
             >
-              <BulbIcon className="scale-80 md:scale-100"/>
+              <BulbIcon className="scale-80 md:scale-100" />
             </div>
 
             {/* Title */}
@@ -635,8 +640,49 @@ export default function Home() {
         </div>
       </div>
 
+      {/* TEASER EVENT SECTION */}
+      <div className="w-full px-6 md:px-10 lg:px-20 py-12 md:py-20 bg-white">
+        {/* Perhatikan penambahan 'gap-6 lg:gap-8' dan penghapusan warna background pada wrapper utama */}
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-4 lg:gap-4">
+          {/* BAGIAN KIRI: Kotak Teks & Tombol */}
+          <div className="w-full md:w-1/2 bg-[#F7F3EB] rounded-xl md:rounded-2xl p-6 md:p-8 flex flex-col justify-center">
+            {/* Judul Utama (Diberi warna Maroon agar lebih menonjol seperti di referensi) */}
+            <h2 className="text-3xl md:text-4xl font-bold text-[#9E0040] font-averia mb-6 md:mb-8 leading-tight">
+              Where Coffee Brings People Together
+            </h2>
+
+            {/* Deskripsi */}
+            <p className="mb-6 md:mb-8 text-sm md:text-lg lg:text-xl leading-relaxed text-[#7B6155] font-gantari">
+              From industry exhibitions to local festivals, we're always excited
+              to share our coffee and connect with the community. Explore
+              Karlina's journey and discover the moments we've brewed together.
+            </p>
+
+            {/* Tombol CTA */}
+            <a
+              href="/events"
+              className="w-full md:w-fit flex items-center justify-center gap-3 px-6 py-3.5 md:px-8 md:py-4 bg-[#80102b] text-[#F7F3EB] border-2 border-[#80102b] font-semibold rounded-2xl transition-all duration-300 group hover:bg-transparent hover:text-[#80102b]"
+            >
+              Explore Events
+              <span className="transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
+            </a>
+          </div>
+
+          {/* BAGIAN KANAN: Kotak Foto */}
+          {/* Diberi min-h agar tinggi foto minimal menyesuaikan teks di sebelahnya saat di layar kecil */}
+          <div className="w-full md:w-1/2 min-h-[350px] md:min-h-fill relative rounded-xl md:rounded-2xl overflow-hidden group shadow-sm">
+            <div className="absolute inset-0 bg-[url('../app/asset/teaserevent.webp')] bg-cover bg-center transition-transform duration-1000 group-hover:scale-105"></div>
+
+            {/* Efek gradasi tipis agar tidak terlalu flat */}
+            <div className="absolute inset-0 bg-black/5 transition-colors duration-500 group-hover:bg-transparent"></div>
+          </div>
+        </div>
+      </div>
+
       {/* Parent Relation */}
-      <div className="relative w-full h-105 bg-[url('../app/asset/bgpartnership2.webp')] bg-cover bg-center bg-no-repeat mt-16">
+      <div className="relative w-full h-105 bg-[url('../app/asset/bgpartnership2.webp')] bg-cover bg-center bg-no-repeat">
         <div className="pt-12 md:pt-16 text-center font-semibold text-3xl text-[#9E0040] font-averia">
           OUR PARTNERSHIP
         </div>
@@ -648,8 +694,6 @@ export default function Home() {
           <LogoSlider></LogoSlider>
         </div>
       </div>
-
-      {/* </body> */}
 
       <footer>
         <FooterbarComp />

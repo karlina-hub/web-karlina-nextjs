@@ -104,8 +104,8 @@ export function NavbarComp() {
           {[
             { name: "Our Story", href: "/ourstory" },
             { name: "Product", href: "/product" },
-            { name: "Wholesale", href: "/wholesale" },
             { name: "Contact", href: "/contact" },
+            // { name: "Shop", href: "/shop" },
           ].map((item, index) => (
             <a
               key={index}
@@ -137,7 +137,7 @@ export function NavbarComp() {
             { name: "Our Story", href: "/ourstory" },
             { name: "Product", href: "/product" },
             { name: "Contact", href: "/contact" },
-            { name: "Wholesale", href: "/wholesale" },
+            // { name: "Shop", href: "/shop" },
           ].map((item, index) => (
             <a
               key={index}
