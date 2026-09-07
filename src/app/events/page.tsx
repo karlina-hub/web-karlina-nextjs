@@ -33,12 +33,12 @@ export default function EventsPage() {
 
   // DATA GALLERY: Gunakan thumbnailevent.webp untuk semua 6 kotak sementara
   const galleryImages = [
-    "bg-[url('../app/asset/thumbnailevent.webp')]",
-    "bg-[url('../app/asset/thumbnailevent.webp')]",
-    "bg-[url('../app/asset/thumbnailevent.webp')]",
-    "bg-[url('../app/asset/thumbnailevent.webp')]",
-    "bg-[url('../app/asset/thumbnailevent.webp')]",
-    "bg-[url('../app/asset/thumbnailevent.webp')]",
+    "bg-[url('../app/asset/recap1.webp')]",
+    "bg-[url('../app/asset/recap2.webp')]",
+    "bg-[url('../app/asset/recap3.webp')]",
+    "bg-[url('../app/asset/recap4.webp')]",
+    "bg-[url('../app/asset/recap5.webp')]",
+    "bg-[url('../app/asset/recap6.webp')]",
   ];
 
   // Data Highlights Event
@@ -48,7 +48,7 @@ export default function EventsPage() {
       title: "Experiencing The Karlina Booth",
       description:
         "More than just a pop-up, our booth became a lively gathering spot for coffee lovers. From serving quick espressos to sharing the stories behind our beans, we made sure every visitor felt Karlina's signature hospitality.",
-      image: "bg-[url('../app/asset/thumbnailevent.webp')]",
+      image: "bg-[url('../app/asset/card1event.webp')]",
       link: "https://www.instagram.com/p/DbU68IavJRo/",
     },
     {
@@ -56,7 +56,7 @@ export default function EventsPage() {
       title: "The Slow Bar Experience",
       description:
         "We took a moment to slow down and appreciate the craft. Over our finest manual brews, we connected with visitors to chat about flavor notes, bean origins, and our meticulous roasting process.",
-      image: "bg-[url('../app/asset/thumbnailevent.webp')]",
+      image: "bg-[url('../app/asset/card2event.webp')]",
       link: null,
     },
     {
@@ -64,7 +64,7 @@ export default function EventsPage() {
       title: "Perfecting The Coffee Craft",
       description:
         "Behind every great cup is pure dedication to precision. Throughout the festival, our team constantly calibrated the equipment and perfected our recipes to ensure consistent quality in every single drop.",
-      image: "bg-[url('../app/asset/thumbnailevent.webp')]",
+      image: "bg-[url('../app/asset/card3event.webp')]",
       link: null,
     },
   ];
