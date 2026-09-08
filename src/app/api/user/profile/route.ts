@@ -2,9 +2,15 @@ import { NextResponse } from 'next/server';
 import { PrismaClient } from "@prisma/client";
 import jwt from 'jsonwebtoken';
 
-const prisma = new PrismaClient({
-  datasourceUrl: process.env.DATABASE_URL,
-});
+// 1. Import adapter tambahan
+import { Pool } from 'pg'; 
+import { PrismaPg } from '@prisma/adapter-pg'; 
+
+// 2. Setup adapter database
+const pool = new Pool({ connectionString: process.env.DATABASE_URL });
+const adapter = new PrismaPg(pool);
+
+const prisma = new PrismaClient({ adapter });
 
 export async function GET(request: Request) {
   try {
