@@ -1,19 +1,18 @@
 FROM node:22-alpine AS base
 
-# Install pnpm and dependencies for native modules
 RUN corepack enable && corepack prepare pnpm@latest --activate
 RUN apk add --no-cache python3 make g++
 
 # Install dependencies
 FROM base AS deps
 WORKDIR /app
-COPY package.json pnpm-lock.yaml .npmrc* ./
-RUN pnpm install --frozen-lockfile
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm install --frozen-lockfile --config.confirmModulesPurge=false
 
 # Generate Prisma Client
 FROM base AS prisma
 WORKDIR /app
-COPY package.json pnpm-lock.yaml prisma ./ 
+COPY package.json pnpm-lock.yaml prisma ./
 COPY --from=deps /app/node_modules ./node_modules
 RUN pnpm prisma generate
 
