@@ -7,7 +7,7 @@ RUN apk add --no-cache python3 make g++
 # Install dependencies
 FROM base AS deps
 WORKDIR /app
-COPY package.json pnpm-lock.yaml ./
+COPY package.json pnpm-lock.yaml .npmrc* ./
 RUN pnpm install --frozen-lockfile
 
 # Generate Prisma Client
